@@ -1,0 +1,30 @@
+site_name: Today I Learn (TIL)
+site_url: https://o957.github.io/O957-TIL/
+repo_url: https://github.com/O957/O957-TIL
+repo_name: O957/O957-TIL
+site_description: The daily learnings of O957.
+site_author: O957
+
+theme:
+  name: material
+  palette:
+    scheme: default
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Learnings:
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
