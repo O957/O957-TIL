@@ -1,9 +1,9 @@
-site_name: Today I Learn (TIL)
-site_url: https://o957.github.io/O957-TIL/
-repo_url: https://github.com/O957/O957-TIL
-repo_name: O957/O957-TIL
-site_description: The daily learnings of O957.
-site_author: O957
+site_name: "Today I Learn (TIL)"
+site_url: "https://o957.github.io/O957-TIL/"
+repo_url: "https://github.com/O957/O957-TIL"
+repo_name: "O957/O957-TIL"
+site_description: "The daily learnings of O957."
+site_author: "O957"
 
 theme:
   name: material
@@ -18,6 +18,8 @@ theme:
 nav:
   - Home: index.md
   - Learnings:
+    - Python:
+        
 
 markdown_extensions:
   - admonition
