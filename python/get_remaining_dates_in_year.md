@@ -1,5 +1,7 @@
 # Get The Remaining Dates In A Year Using Datetime
 
+_Today I Learned added on 2025-11-13, learned on 2025-11-11._
+
 Suppose you want to see how many dates remaining in the current year or, better yet, want a `list` of all of the remaining dates in the current year. 
 
 The Python package `datetime`, which is Python's built-in date and time manipulation package (<https://docs.python.org/3/library/datetime.html>), allows one to do this rather easily.
