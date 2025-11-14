@@ -8,7 +8,7 @@ A merchant on Ebay sent me a list of ID items (12 characters long) as a newline 
 # concatenated str
 c_str = "432853242343242343242342343243276575"
 
-# parition size
+# partition size
 p_size  = 12
 
 # uniformly partitioned string; ['432853242343', '242343242342', '343243276575']

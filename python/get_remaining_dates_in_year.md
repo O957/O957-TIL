@@ -2,7 +2,7 @@
 
 _Today I Learned added on 2025-11-13, learned on 2025-11-11._
 
-Suppose you want to see how many dates remaining in the current year or, better yet, want a `list` of all of the remaining dates in the current year. 
+Suppose you want to see how many dates remaining in the current year or, better yet, want a `list` of all of the remaining dates in the current year.
 
 The Python package `datetime`, which is Python's built-in date and time manipulation package (<https://docs.python.org/3/library/datetime.html>), allows one to do this rather easily.
 
@@ -23,7 +23,7 @@ remaining_days_in_year = (end_of_year - today).days + 1
 remaining_dates_in_year = [today + datetime.timedelta(days=d).strftime("%Y-%m-%d") for d in range(remaining_days_in_year)]
 ```
 
-I became interested in this originally when I wanted to create text files for my notes for the remainder of the year. I use files entitled `Notes_For_YYYY-DD-MM` containing a template (e.g. Todos, Daily Plan, etc...) and the task boiled down to getting the remaining [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) formatted dates in the current year. The full program can be found below: 
+I became interested in this originally when I wanted to create text files for my notes for the remainder of the year. I use files entitled `Notes_For_YYYY-DD-MM` containing a template (e.g. Todos, Daily Plan, etc...) and the task boiled down to getting the remaining [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) formatted dates in the current year. The full program can be found below:
 
 <details markdown=1>
 
@@ -42,12 +42,12 @@ import sys
 def get_remaining_dates(year: int) -> list[str]:
     """
     Get all remaining dates in the specified year as ISO-8601 strings.
-    
+
     Parameters
     ----------
     year : int
         The year to get remaining dates for.
-    
+
     Returns
     -------
     list[str]
@@ -62,12 +62,12 @@ def get_remaining_dates(year: int) -> list[str]:
 def read_template(filename: str) -> str:
     """
     Read the notes template file.
-    
+
     Parameters
     ----------
     filename : str
         Path to the template file.
-    
+
     Returns
     -------
     str
@@ -87,7 +87,7 @@ def read_template(filename: str) -> str:
 def create_note_files(dates: list[str], template: str, prefix: str = "Notes_For_") -> int:
     """
     Create note files for each date if they don't already exist.
-    
+
     Parameters
     ----------
     dates : list[str]
@@ -96,7 +96,7 @@ def create_note_files(dates: list[str], template: str, prefix: str = "Notes_For_
         Template content to write to each file.
     prefix : str
         Filename prefix for note files.
-    
+
     Returns
     -------
     int
