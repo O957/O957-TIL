@@ -17,7 +17,7 @@ up_str = [c_str[i:i+p_size] for i in range(0, len(c_str),  p_size) if len(c_str)
 
 The simpler method is to use Python's `textwrap` package:
 
-```
+```python
 import textwrap
 
 
