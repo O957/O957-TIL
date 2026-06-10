@@ -1,0 +1,14 @@
+project:
+  type: book
+
+book:
+  title: "Today I Learned"
+  site-url: "https://o957.github.io/O957-TIL/"
+  chapters:
+    - index.qmd
+    - part: "python"
+      chapters:
+        - python/check_csv_equivalence_using_polars.md
+
+execute:
+  freeze: auto
