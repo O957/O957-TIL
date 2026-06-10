@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Today I Learned",
+    "section": "",
+    "text": "1 Welcome!",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome!</span>"
+    ]
+  },
+  {
+    "objectID": "python/check_csv_equivalence_using_polars.html",
+    "href": "python/check_csv_equivalence_using_polars.html",
+    "title": "2  Check CSV Equivalence Using Polars",
+    "section": "",
+    "text": "Today I Learned added on 2025-11-20, learned on 2025-11-20.\nI found myself reviewing two PRs made by the same individual and both PRs had a csv files containing forecasts. The csvs seemed identical, but I wasn’t sure, so I wanted a way to check using Python. Given that, at present, I prefer polars over pandas, I searched polars for a method and found that the equals (see https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.equals.html) method of the DataFrame class satisfied my needs.\nExample csv file as example_01.csv:\ncolumn_1,column_2\n45,98\n32,31\n17,100\nExample csv file as example_02.csv:\ncolumn_1,column_2\n87,98\n32,31\n17,100\nFirst, the non-Python-based, Unix command diff (the standard method I’ve employed for equivalence testing):\ndiff example_01.csv example_02.csv\n\n# output:\n# 2c2\n# &lt; 45,98\n# ---\n# &gt; 87,98\nIn Python, using polars:\nimport polars as pl\n\n\ndf_01 = pl.read_csv(\"example_01.csv\")\ndf_02 = pl.read_csv(\"example_02.csv\")\n\n# output: False\ndf_01.equals(df_02)",
+    "crumbs": [
+      "python",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Check CSV Equivalence Using Polars</span>"
+    ]
+  }
+]
