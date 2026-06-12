@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   push:
-    branches: master
+    branches: main
 
 name: "Quarto Publish"
 
@@ -17,12 +17,11 @@ jobs:
       - name: "Set Up Quarto"
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          tinytex: true
+          tinytex: true   # required for PDF download
 
       - name: "Render And Publish"
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
-          path: website
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
