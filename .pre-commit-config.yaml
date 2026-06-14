@@ -194,7 +194,7 @@ repos:
 # SPELLING
 ###############################################################################
 -   repo: https://github.com/crate-ci/typos
-    rev: v1
+    rev: v1.39.1
     hooks:
     -   id: typos
         args: ["--force-exclude"]
@@ -209,4 +209,19 @@ repos:
     rev:  v0.19.1
     hooks:
     -   id: gitlint
+-   repo: https://github.com/etiennebacher/jarl-pre-commit
+    rev: 0.5.0
+    hooks:
+    -   id: jarl-check
+        args: ["--fix", "--allow-dirty"]
+-   repo: https://github.com/posit-dev/air-pre-commit
+    rev: 0.9.0
+    hooks:
+    -   id: air-format
+-   repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.4.0
+    hooks:
+    -   id: conventional-pre-commit
+        stages: [commit-msg]
+        args: [--strict, --force-scope, feat, fix, chore, test, custom]
 ###############################################################################

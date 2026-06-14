@@ -1,0 +1,83 @@
+project:
+  type: website
+  resources:
+    - assets/fonts/
+
+website:
+  title: "Today I Learned"
+  reader-mode: true
+  description: "A collection of references and demonstrations for concepts and methods that I have come across and want to mentally retain."
+  repo-url: "https://github.com/O957/O957-TIL"
+  repo-actions: [issue, source]
+  site-url: "https://o957.github.io/O957-TIL/"
+  search:
+    location: "navbar"
+    type: "overlay"
+  page-footer:
+    left: "© 2025—2026 O957 · [Apache License 2.0](https://github.com/O957/O957-TIL/blob/main/LICENSE)"
+    right: "Made with [Quarto](https://quarto.org/)."
+  navbar:
+    background: "gray"
+    right:
+      - icon: "github"
+        href: "https://github.com/O957"
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light:
+        - cosmo
+        - themes/theme.scss
+        - themes/light.scss
+      dark:
+        - darkly
+        - themes/theme.scss
+        - themes/dark.scss
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    code-tools: true
+    link-external-newwindow: true
+    smooth-scroll: true
+  pdf:
+    documentclass: scrreprt
+    papersize: a4
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    colorlinks: true
+    code-block-bg: true
+    geometry:
+      - margin=1in
+    # wrap long code lines in the pdf. code-overflow: wrap is html-only, so
+    # redefine pandoc's highlighting env w/ fvextra. breaknonspaceingroup
+    # is what lets breaks happen inside the syntax-highlight macros (e.g. a
+    # long no-space string), which plain breaklines/breakanywhere cannot do.
+    include-in-header:
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,breaknonspaceingroup,breakanywhere,commandchars=\\\{\}}
+
+execute:
+  freeze: auto
+
+# Some collected documentation links, for quick reference:
+# https://quarto.org/docs/reference/formats/html.html#website
+
+# repo-actions: Setting this to false prevents the repo-actions from
+# appearing on this page. Other possible values are none or one
+# or more of edit, source, and issue, e.g. [edit, source, issue].
+
+# code-tools: Include a code tools menu (for hiding and showing code).
+# Use true or false to enable or disable the standard code tools menu.
+# Specify sub-properties source, toggle, and caption to customize the
+# behavior and appearance of code tools.
+
+# code-link: Enables hyper-linking of functions within code blocks to
+# their online documentation. Code linking is currently implemented only
+# for the knitr engine (via the downlit package). A limitation of downlit
+# currently prevents code linking if code-line-numbers is also true.

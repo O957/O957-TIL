@@ -1,0 +1,73 @@
+/*-- scss:defaults --*/
+
+
+$web-font-path: false;
+
+$font-dir: "assets/fonts";
+
+// for body
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("#{$font-dir}/source-serif-4-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("#{$font-dir}/source-serif-4-italic-latin.woff2") format("woff2");
+}
+
+// for headings
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("#{$font-dir}/inter-latin.woff2") format("woff2");
+}
+
+// for code
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("#{$font-dir}/jetbrains-mono-latin.woff2") format("woff2");
+}
+
+$font-family-base: "Source Serif 4", Georgia, "Times New Roman", serif;
+$font-family-monospace: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+$headings-font-family: "Inter", -apple-system, "Segoe UI", Helvetica, sans-serif;
+$headings-font-weight: 600;
+
+$font-size-root: 18px;
+$line-height-base: 1.65;
+
+$toc-font-size: 0.85rem;
+
+/*-- scss:rules --*/
+
+.sidebar-navigation,
+#quarto-margin-sidebar {
+  font-family: $headings-font-family;
+}
+
+.sidebar-item .chapter-number,
+.chapter-title {
+  font-weight: 500;
+}
+
+pre.sourceCode {
+  font-size: 0.85em;
+}
+
+.content h1 + p > em:only-child {
+  display: block;
+  color: var(--bs-secondary-color);
+  font-size: 0.9em;
+  margin-bottom: 1.5rem;
+}

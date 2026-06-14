@@ -1,23 +1,19 @@
-# BLANK README
+# O957's Today I Learned
 
-This repository was generated from [O957](https://github.com/O957)'s [template repository](https://github.com/O957/O957-Template).
+_A collection of references and demonstrations for concepts and methods that I have come across and want to mentally retain._
 
-If you are seeing this message, then this repository likely contains no meaningful content.
+For this repository's website, please see: <https://o957.github.io/O957-TIL/>.
 
-## License Standard Notice
+"Today I Learned" (hereafter TIL) repositories are not unusual on GitHub and are examples of public learning. The idea: when you learn something or solve an issue (usually with respect to programming) that you wish to recall, you can, close in time to when you experienced either of these, record the procedures or information in a public place, allowing yourself and others to reference the entry for future use.
 
-```
-Copyright 2025 O957 (Pseudonym)
+> [!NOTE]
+>
+> This repository is an ongoing enterprise without a defined end-date and is one I add to intermittently. Please feel free to point out any errors or, with respect to certain TIL entries, to direct me to additional resources.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## [Contributing](#contributing)
 
-    http://www.apache.org/licenses/LICENSE-2.0
+For guidelines on contributing to this repository, see the [contributing](./CONTRIBUTING.md) file. In making contributions, please follow the [code of conduct](./CODE_OF_CONDUCT.md). Contributions consisting of corrections to existing TIL entries or of references to procedures which outperform certain TIL entries are appreciated.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+## [License](#license)
+
+This repository is licensed under the Apache 2.0 license. For details, see [license](./LICENSE).
