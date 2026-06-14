@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Check CSV Equivalence Using Polars – Today I Learned</title>
+<title>4&nbsp; Uniformly Partitioning A String Using Textwrap – Today I Learned</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../python/find_empty_pdfs_using_pathlib.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../r/handle_unbound_tidyr_variables.html" rel="next">
+<link href="../python/get_remaining_dates_in_year_using_datetime.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -287,7 +287,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../python/check_csv_equivalence_using_polars.html">Python</a></li><li class="breadcrumb-item"><a href="../python/check_csv_equivalence_using_polars.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Check CSV Equivalence Using Polars</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../python/check_csv_equivalence_using_polars.html">Python</a></li><li class="breadcrumb-item"><a href="../python/uniformly_partitioning_a_string_textwrap.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uniformly Partitioning A String Using Textwrap</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -334,7 +334,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../python/check_csv_equivalence_using_polars.html" class="sidebar-item-text sidebar-link active">
+  <a href="../python/check_csv_equivalence_using_polars.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Check CSV Equivalence Using Polars</span></span></a>
   </div>
 </li>
@@ -352,7 +352,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../python/uniformly_partitioning_a_string_textwrap.html" class="sidebar-item-text sidebar-link">
+  <a href="../python/uniformly_partitioning_a_string_textwrap.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uniformly Partitioning A String Using Textwrap</span></span></a>
   </div>
 </li>
@@ -410,9 +410,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../python/check_csv_equivalence_using_polars.html">Python</a></li><li class="breadcrumb-item"><a href="../python/check_csv_equivalence_using_polars.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Check CSV Equivalence Using Polars</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../python/check_csv_equivalence_using_polars.html">Python</a></li><li class="breadcrumb-item"><a href="../python/uniformly_partitioning_a_string_textwrap.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uniformly Partitioning A String Using Textwrap</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Check CSV Equivalence Using Polars</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uniformly Partitioning A String Using Textwrap</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -429,36 +429,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><em>Today I Learned added on 2025-11-20, learned on 2025-11-20; edited on 2026-06-14.</em></p>
-<p>I found myself reviewing two PRs made by the same individual and each PR had a <code>csv</code> file containing forecasts. The <code>csv</code>s seemed identical, but I wasn’t sure, so I wanted a way to check for equivalence using Python.</p>
-<p>Given that, at present, I prefer <code>polars</code> over <code>pandas</code>, I searched <code>polars</code> for a method and found the method <code>equals</code> (see <a href="https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.equals.html" class="uri">https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.equals.html</a>) in the <code>DataFrame</code> class .</p>
-<p>Example <code>csv</code> file as <code>example_01.csv</code>:</p>
-<pre><code>column_1,column_2
-45,98
-32,31
-17,100</code></pre>
-<p>Example <code>csv</code> file as <code>example_02.csv</code>:</p>
-<pre><code>column_1,column_2
-87,98
-32,31
-17,100</code></pre>
-<p>First, the non-Python, Unix command <code>diff</code> (the standard method I’ve employed for equivalence testing) can also be used.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span> example_01.csv example_02.csv</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># output:</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2c2</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># &lt; 45,98</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; 87,98</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>In Python, using the <code>equals</code> method of <code>polars</code>, which outputs <code>True</code> or <code>False</code>, instead of the actual differences if there are any:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>df_01 <span class="op">=</span> pl.read_csv(<span class="st">"example_01.csv"</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>df_02 <span class="op">=</span> pl.read_csv(<span class="st">"example_02.csv"</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># output: False</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>df_01.equals(df_02)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>Today I Learned added on 2025-11-13, learned on 2025-11-08; edited on 2026-06-14.</em></p>
+<p>A merchant on Ebay sent me a list of item ID codes (each 12 characters long) as a newline separated list. When I copied and pasted the list into a text file (to have two separate windows open at once), the characters were concatenated into a single string — how annoying! I tried different types of copying-and-pasting (pasting using <code>Cmd-V</code> and <code>Cmd-Shift-V</code>) to no avail. I then wondered if Python could help me avoid manually cutting out each 12 character string from the single long string. The answer is “Yes!” and there is a package called <code>textwrap</code> that can help with this task specifically.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># concatenated str</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>c_str <span class="op">=</span> <span class="st">"432853242343242343242342343243276575"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># partition size</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>p_size  <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># uniformly partitioned string; ['432853242343', '242343242342', '343243276575']</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>up_str <span class="op">=</span> [c_str[i:i<span class="op">+</span>p_size] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(c_str),  p_size) <span class="cf">if</span> <span class="bu">len</span>(c_str) <span class="op">%</span> p_size <span class="op">==</span> <span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The simpler method is to use Python’s <code>textwrap</code> package:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> textwrap</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>c_str <span class="op">=</span> <span class="st">"432853242343242343242342343243276575"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>p_size  <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(c_str) <span class="op">%</span> p_size <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ['432853242343', '242343242342', '343243276575']</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    up_str <span class="op">=</span> textwrap.wrap(c_str, p_size)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 <!-- -->
@@ -936,68 +927,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Welcome!">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome!</span>
+      <a href="../python/get_remaining_dates_in_year_using_datetime.html" class="pagination-link" aria-label="Get The Remaining Dates In A Year Using Datetime">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Get The Remaining Dates In A Year Using Datetime</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../python/find_empty_pdfs_using_pathlib.html" class="pagination-link" aria-label="Find Empty PDFs Using Pathlib">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Find Empty PDFs Using Pathlib</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../r/handle_unbound_tidyr_variables.html" class="pagination-link" aria-label="Handling Unbound Tidyr Variables Using Rlang Data Masking">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Handling Unbound Tidyr Variables Using Rlang Data Masking</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Check CSV Equivalence Using Polars</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>_Today I Learned added on 2025-11-20, learned on 2025-11-20; edited on 2026-06-14._</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>I found myself reviewing two PRs made by the same individual and each PR had a <span class="in">`csv`</span> file containing forecasts. The <span class="in">`csv`</span>s seemed identical, but I wasn't sure, so I wanted a way to check for equivalence using Python.</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Given that, at present, I prefer <span class="in">`polars`</span> over <span class="in">`pandas`</span>, I searched <span class="in">`polars`</span> for a method and found the method <span class="in">`equals`</span> (see <span class="ot">&lt;https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.equals.html&gt;</span>) in the <span class="in">`DataFrame`</span> class .</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>Example <span class="in">`csv`</span> file as <span class="in">`example_01.csv`</span>:</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="in">column_1,column_2</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="in">45,98</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="in">32,31</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="in">17,100</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>Example <span class="in">`csv`</span> file as <span class="in">`example_02.csv`</span>:</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="in">column_1,column_2</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="in">87,98</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="in">32,31</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="in">17,100</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>First, the non-Python, Unix command <span class="in">`diff`</span> (the standard method I've employed for equivalence testing) can also be used.</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span> example_01.csv example_02.csv</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co"># output:</span></span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="co"># 2c2</span></span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="co"># &lt; 45,98</span></span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="co"># ---</span></span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; 87,98</span></span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>In Python, using the <span class="in">`equals`</span> method of <span class="in">`polars`</span>, which outputs <span class="in">`True`</span> or <span class="in">`False`</span>, instead of the actual differences if there are any:</span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>df_01 <span class="op">=</span> pl.read_csv(<span class="st">"example_01.csv"</span>)</span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>df_02 <span class="op">=</span> pl.read_csv(<span class="st">"example_02.csv"</span>)</span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="co"># output: False</span></span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>df_01.equals(df_02)</span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Uniformly Partitioning A String Using Textwrap</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>_Today I Learned added on 2025-11-13, learned on 2025-11-08; edited on 2026-06-14._</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>A merchant on Ebay sent me a list of item ID codes (each 12 characters long) as a newline separated list. When I copied and pasted the list into a text file (to have two separate windows open at once), the characters were concatenated into a single string — how annoying! I tried different types of copying-and-pasting (pasting using <span class="in">`Cmd-V`</span> and <span class="in">`Cmd-Shift-V`</span>) to no avail. I then wondered if Python could help me avoid manually cutting out each 12 character string from the single long string. The answer is "Yes!" and there is a package called <span class="in">`textwrap`</span> that can help with this task specifically.</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># concatenated str</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>c_str <span class="op">=</span> <span class="st">"432853242343242343242342343243276575"</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># partition size</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>p_size  <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># uniformly partitioned string; ['432853242343', '242343242342', '343243276575']</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>up_str <span class="op">=</span> [c_str[i:i<span class="op">+</span>p_size] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(c_str),  p_size) <span class="cf">if</span> <span class="bu">len</span>(c_str) <span class="op">%</span> p_size <span class="op">==</span> <span class="dv">0</span>]</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>The simpler method is to use Python's <span class="in">`textwrap`</span> package:</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> textwrap</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>c_str <span class="op">=</span> <span class="st">"432853242343242343242342343243276575"</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>p_size  <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(c_str) <span class="op">%</span> p_size <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ['432853242343', '242343242342', '343243276575']</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    up_str <span class="op">=</span> textwrap.wrap(c_str, p_size)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -1007,7 +979,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/O957/O957-TIL/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/O957/O957-TIL/blob/main/python/check_csv_equivalence_using_polars.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/O957/O957-TIL/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/O957/O957-TIL/blob/main/python/uniformly_partitioning_a_string_textwrap.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
