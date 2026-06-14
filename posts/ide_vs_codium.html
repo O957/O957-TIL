@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-12-01">
 
-<title>References – Today I Learned</title>
+<title>Switch To VSCodium From VSCode – Today I Learned</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -58,63 +59,42 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./vs_code/open_vscode_from_cmd_line.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-949ceaa56ea364b0f0e87398b301f850.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6af6b1ed15c77f19e211377a8beffc89.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-949ceaa56ea364b0f0e87398b301f850.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2f832ec19d3cddbddb8eee1bcfc69de3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4dbace8073f258eb6904150b8c016d64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-2f832ec19d3cddbddb8eee1bcfc69de3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-949ceaa56ea364b0f0e87398b301f850.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6af6b1ed15c77f19e211377a8beffc89.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-949ceaa56ea364b0f0e87398b301f850.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-2ed055156c01d80252202c7876d18ce8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b3ea4a6e691d638ef5dc327872891dc3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-2ed055156c01d80252202c7876d18ce8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -134,7 +114,7 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -300,145 +280,77 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Today I Learned</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/O957"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Today I Learned</a> 
-        <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/O957/O957-TIL" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Today-I-Learned.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome!</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Python</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./python/check_csv_equivalence_using_polars.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Check CSV Equivalence Using Polars</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./python/find_empty_pdfs_using_pathlib.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Find Empty PDFs Using Pathlib</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./python/get_remaining_dates_in_year_using_datetime.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Get The Remaining Dates In A Year Using Datetime</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./python/uniformly_partitioning_a_string_textwrap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Uniformly Partitioning A String Using Textwrap</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">R</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./r/handle_unbound_tidyr_variables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Handling Unbound Tidyr Variables Using Rlang Data Masking</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">VS Code / VSCodium</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./vs_code/open_vscode_from_cmd_line.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Opening VS Code From The Terminal Via Code</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">References</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ide_vs_codium.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">References</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-</div>
+<div class="quarto-title-block"><div><h1 class="title">Switch To VSCodium From VSCode</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">vscode</div>
+    <div class="quarto-category">vscodium</div>
+    <div class="quarto-category">IDE</div>
+    <div class="quarto-category">privacy</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 1, 2025</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">June 14, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -447,33 +359,22 @@ div.csl-indent {
 </header>
 
 
-<p>Collected references across the TIL entries.</p>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-rlang-data-mask" class="csl-entry" role="listitem">
-Henry, Lionel, and Hadley Wickham. 2025. <span>“What Is Data-Masking and Why Do i Need Curly-Curly?”</span> <a href="https://rlang.r-lib.org/reference/topic-data-mask.html">https://rlang.r-lib.org/reference/topic-data-mask.html</a>.
-</div>
-<div id="ref-vscode-cli" class="csl-entry" role="listitem">
-Microsoft. 2025. <span>“Command Line Interface — Visual Studio Code Documentation.”</span> <a href="https://code.visualstudio.com/docs/editor/command-line">https://code.visualstudio.com/docs/editor/command-line</a>.
-</div>
-<div id="ref-polars-equals" class="csl-entry" role="listitem">
-Polars Developers. 2025. <span>“Polars.DataFrame.equals — Polars Documentation.”</span> <a href="https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.equals.html">https://docs.pola.rs/api/python/stable/reference/dataframe/api/polars.DataFrame.equals.html</a>.
-</div>
-<div id="ref-python-datetime" class="csl-entry" role="listitem">
-Python Software Foundation. 2025a. <span>“Datetime — Basic Date and Time Types.”</span> <a href="https://docs.python.org/3/library/datetime.html">https://docs.python.org/3/library/datetime.html</a>.
-</div>
-<div id="ref-python-pathlib" class="csl-entry" role="listitem">
-Python Software Foundation. 2025b. <span>“Pathlib — Object-Oriented Filesystem Paths.”</span> <a href="https://docs.python.org/3/library/pathlib.html">https://docs.python.org/3/library/pathlib.html</a>.
-</div>
-<div id="ref-python-textwrap" class="csl-entry" role="listitem">
-Python Software Foundation. 2025c. <span>“Textwrap — Text Wrapping and Filling.”</span> <a href="https://docs.python.org/3/library/textwrap.html">https://docs.python.org/3/library/textwrap.html</a>.
-</div>
-<div id="ref-dplyr-in-packages" class="csl-entry" role="listitem">
-Wickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis Vaughan. 2025. <span>“Using Dplyr in Packages.”</span> <a href="https://dplyr.tidyverse.org/articles/in-packages.html">https://dplyr.tidyverse.org/articles/in-packages.html</a>.
-</div>
-<div id="ref-iso-8601" class="csl-entry" role="listitem">
-Wikipedia Contributors. 2025. <span>“ISO 8601.”</span> <a href="https://en.wikipedia.org/wiki/ISO_8601">https://en.wikipedia.org/wiki/ISO_8601</a>.
-</div>
-</div>
+<p><em>Today I Learned added on 2026-06-14, learned sometime around 2025-12-01.</em></p>
+<p>In reviewing which tools are comparatively better with respect to privacy on <a href="https://github.com/pluja/awesome-privacy" class="uri">https://github.com/pluja/awesome-privacy</a>, I noticed that VSCodium (<a href="https://vscodium.com/" class="uri">https://vscodium.com/</a>) was listed.</p>
+<p>Curious, I went to their website and saw the following:</p>
+<blockquote class="blockquote">
+<p>Microsoft’s <code>vscode</code> source code is open source (MIT-licensed), but the product available for download (Visual Studio Code) is licensed under <a href="https://code.visualstudio.com/license">this not-FLOSS license</a> and contains telemetry/tracking. According to <a href="https://github.com/Microsoft/vscode/issues/60#issuecomment-161792005">this comment</a> from a Visual Studio Code maintainer:</p>
+<blockquote class="blockquote">
+<p>When we [Microsoft] build Visual Studio Code, we do exactly this. We clone the vscode repository, we lay down a customized product.json that has Microsoft specific functionality (telemetry, gallery, logo, etc.), and then produce a build that we release under our license.</p>
+<p>When you clone and build from the vscode repo, none of these endpoints are configured in the default product.json. Therefore, you generate a “clean” build, without the Microsoft customizations, which is by default licensed under the MIT license</p>
+</blockquote>
+<p>The VSCodium project exists so that you don’t have to download+build from source. This project includes special build scripts that clone Microsoft’s vscode repo, run the build commands, and upload the resulting binaries for you to <a href="https://github.com/VSCodium/vscodium/releases">GitHub releases</a>. <strong>These binaries are licensed under the MIT license. Telemetry is disabled</strong></p>
+</blockquote>
+<p>Sold, I switched that day to VSCodium and I have not regretted my choice!</p>
+<p>As for the name “Codium” and the logo (which looks like some sort of sea coral), I found Codium (<a href="https://en.wikipedia.org/wiki/Codium" class="uri">https://en.wikipedia.org/wiki/Codium</a>) on Wikipedia:</p>
+<blockquote class="blockquote">
+<p><strong><em>Codium</em></strong> is a <a href="https://en.wikipedia.org/wiki/Genus" title="Genus">genus</a> of <a href="https://en.wikipedia.org/wiki/Edible_seaweed" title="Edible seaweed">edible</a> <a href="https://en.wikipedia.org/wiki/Green_algae" title="Green algae">green macroalgae</a> (or <a href="https://en.wikipedia.org/wiki/Seaweed" title="Seaweed">seaweed</a>) under the order <a href="https://en.wikipedia.org/wiki/Bryopsidales" title="Bryopsidales">Bryopsidales</a>. The genus name is derived from a Greek word that pertains to the soft texture of its <a href="https://en.wikipedia.org/wiki/Thallus" title="Thallus">thallus</a>. One of the foremost experts on <em>Codium</em> taxonomy was <a href="https://en.wikipedia.org/wiki/Paul_Silva" title="Paul Silva">Paul Claude Silva</a> at the <a href="https://en.wikipedia.org/wiki/University_of_California,_Berkeley" title="University of California, Berkeley">University of California, Berkeley</a>. <a href="https://en.wikipedia.org/wiki/Codium#cite_note-:0-1">1</a> <a href="https://en.wikipedia.org/wiki/Codium#cite_note-Hoek,_Mann_and_Jahns_95-2">2</a> Silva was able to describe 36 species for the genus, and in honor of his work on <em>Codium</em>, <a href="https://en.wikipedia.org/wiki/Codium#cite_note-:0-1">1</a> the species <em>C. silvae</em> was named after him. <a href="https://en.wikipedia.org/wiki/Codium#cite_note-:1-3">3</a></p>
+</blockquote>
 
 
 <!-- -->
@@ -948,27 +849,33 @@ Wikipedia Contributors. 2025. <span>“ISO 8601.”</span> <a href="https://en.w
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./vs_code/open_vscode_from_cmd_line.html" class="pagination-link" aria-label="Opening VS Code From The Terminal Via Code">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Opening VS Code From The Terminal Via Code</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">nocite:</span><span class="co"> |</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">  @*</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Switch To VSCodium From VSCode</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> ["vscode", "vscodium", "IDE", "privacy"]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-12-01"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date-modified:</span><span class="co"> "2026-06-14"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Collected references across the TIL entries.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>_Today I Learned added on 2026-06-14, learned sometime around 2025-12-01._</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>In reviewing which tools are comparatively better with respect to privacy on <span class="ot">&lt;https://github.com/pluja/awesome-privacy&gt;</span>, I noticed that VSCodium (<span class="ot">&lt;https://vscodium.com/&gt;</span>) was listed.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Curious, I went to their website and saw the following:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Microsoft's </span><span class="in">`vscode`</span><span class="at"> source code is open source (MIT-licensed), but the product available for download (Visual Studio Code) is licensed under </span><span class="co">[</span><span class="ot">this not-FLOSS license</span><span class="co">](https://code.visualstudio.com/license)</span><span class="at"> and contains telemetry/tracking. According to </span><span class="co">[</span><span class="ot">this comment</span><span class="co">](https://github.com/Microsoft/vscode/issues/60#issuecomment-161792005)</span><span class="at"> from a Visual Studio Code maintainer:</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &gt; When we </span><span class="co">[</span><span class="ot">Microsoft</span><span class="co">]</span><span class="at"> build Visual Studio Code, we do exactly this. We clone the vscode repository, we lay down a customized product.json that has Microsoft specific functionality (telemetry, gallery, logo, etc.), and then produce a build that we release under our license.</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &gt; When you clone and build from the vscode repo, none of these endpoints are configured in the default product.json. Therefore, you generate a "clean" build, without the Microsoft customizations, which is by default licensed under the MIT license</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The VSCodium project exists so that you don't have to download+build from source. This project includes special build scripts that clone Microsoft's vscode repo, run the build commands, and upload the resulting binaries for you to </span><span class="co">[</span><span class="ot">GitHub releases</span><span class="co">](https://github.com/VSCodium/vscodium/releases)</span><span class="at">. **These binaries are licensed under the MIT license. Telemetry is disabled**</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Sold, I switched that day to VSCodium and I have not regretted my choice!</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>As for the name "Codium" and the logo (which looks like some sort of sea coral), I found Codium (<span class="ot">&lt;https://en.wikipedia.org/wiki/Codium&gt;</span>) on Wikipedia:</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; ***Codium*** is a </span><span class="co">[</span><span class="ot">genus</span><span class="co">](https://en.wikipedia.org/wiki/Genus "Genus")</span><span class="at"> of </span><span class="co">[</span><span class="ot">edible</span><span class="co">](https://en.wikipedia.org/wiki/Edible_seaweed "Edible seaweed")</span><span class="at"> </span><span class="co">[</span><span class="ot">green macroalgae</span><span class="co">](https://en.wikipedia.org/wiki/Green_algae "Green algae")</span><span class="at"> (or </span><span class="co">[</span><span class="ot">seaweed</span><span class="co">](https://en.wikipedia.org/wiki/Seaweed "Seaweed")</span><span class="at">) under the order </span><span class="co">[</span><span class="ot">Bryopsidales</span><span class="co">](https://en.wikipedia.org/wiki/Bryopsidales "Bryopsidales")</span><span class="at">. The genus name is derived from a Greek word that pertains to the soft texture of its </span><span class="co">[</span><span class="ot">thallus</span><span class="co">](https://en.wikipedia.org/wiki/Thallus "Thallus")</span><span class="at">. One of the foremost experts on *Codium* taxonomy was [Paul Claude Silva](https://en.wikipedia.org/wiki/Paul_Silva "Paul Silva") at the [University of California, Berkeley](https://en.wikipedia.org/wiki/University_of_California,_Berkeley "University of California, Berkeley"). [1](https://en.wikipedia.org/wiki/Codium#cite_note-:0-1) [2](https://en.wikipedia.org/wiki/Codium#cite_note-Hoek,_Mann_and_Jahns_95-2) Silva was able to describe 36 species for the genus, and in honor of his work on *Codium*, [1](https://en.wikipedia.org/wiki/Codium#cite_note-:0-1) the species *C. silvae* was named after him. </span><span class="co">[</span><span class="ot">3</span><span class="co">](https://en.wikipedia.org/wiki/Codium#cite_note-:1-3)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -978,7 +885,7 @@ Wikipedia Contributors. 2025. <span>“ISO 8601.”</span> <a href="https://en.w
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/O957/O957-TIL/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/O957/O957-TIL/blob/main/references.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/O957/O957-TIL/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/O957/O957-TIL/blob/main/posts/ide_vs_codium.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
@@ -988,5 +895,5 @@ Wikipedia Contributors. 2025. <span>“ISO 8601.”</span> <a href="https://en.w
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

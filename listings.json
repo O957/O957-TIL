@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/ide_vs_codium.html",
+      "/posts/ide_open_vscode_from_cmd_line.html",
+      "/posts/r_handle_unbound_tidyr_variables.html",
+      "/posts/python_find_empty_pdfs_using_pathlib.html",
+      "/posts/python_check_csv_equivalence_using_polars.html",
+      "/posts/python_uniformly_partitioning_a_string_textwrap.html",
+      "/posts/python_get_remaining_dates_in_year_using_datetime.html"
+    ]
+  }
+]

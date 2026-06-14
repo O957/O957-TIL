@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Today I Learned</title>
+<title>code_of_conduct – Today I Learned</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -110,68 +108,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-reading-time','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="alternate" type="application/rss+xml" title="Today I Learned" href="index.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -371,7 +311,7 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -379,39 +319,101 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a>
+  <li><a href="#contributor-covenant-code-of-conduct" id="toc-contributor-covenant-code-of-conduct" class="nav-link active" data-scroll-target="#contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</a>
   <ul class="collapse">
-  <li><a href="#how-this-site-is-organized" id="toc-how-this-site-is-organized" class="nav-link" data-scroll-target="#how-this-site-is-organized">How This Site Is Organized</a></li>
-  <li><a href="#source" id="toc-source" class="nav-link" data-scroll-target="#source">Source</a></li>
+  <li><a href="#our-pledge" id="toc-our-pledge" class="nav-link" data-scroll-target="#our-pledge">Our Pledge</a></li>
+  <li><a href="#our-standards" id="toc-our-standards" class="nav-link" data-scroll-target="#our-standards">Our Standards</a></li>
+  <li><a href="#enforcement-responsibilities" id="toc-enforcement-responsibilities" class="nav-link" data-scroll-target="#enforcement-responsibilities">Enforcement Responsibilities</a></li>
+  <li><a href="#scope" id="toc-scope" class="nav-link" data-scroll-target="#scope">Scope</a></li>
+  <li><a href="#enforcement" id="toc-enforcement" class="nav-link" data-scroll-target="#enforcement">Enforcement</a></li>
+  <li><a href="#enforcement-guidelines" id="toc-enforcement-guidelines" class="nav-link" data-scroll-target="#enforcement-guidelines">Enforcement Guidelines</a>
+  <ul class="collapse">
+  <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction">1. Correction</a></li>
+  <li><a href="#warning" id="toc-warning" class="nav-link" data-scroll-target="#warning">2. Warning</a></li>
+  <li><a href="#temporary-ban" id="toc-temporary-ban" class="nav-link" data-scroll-target="#temporary-ban">3. Temporary Ban</a></li>
+  <li><a href="#permanent-ban" id="toc-permanent-ban" class="nav-link" data-scroll-target="#permanent-ban">4. Permanent Ban</a></li>
+  </ul></li>
+  <li><a href="#attribution" id="toc-attribution" class="nav-link" data-scroll-target="#attribution">Attribution</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/O957/O957-TIL/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/O957/O957-TIL/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Y3N2">csv <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0ZXRpbWU=">datetime <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SURF">IDE <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGF0aGxpYg==">pathlib <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGRm">pdf <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cG9sYXJz">polars <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJpdmFjeQ==">privacy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGV4dHdyYXA=">textwrap <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGlkeXI=">tidyr <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dnNjb2Rl">vscode <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dnNjb2RpdW0=">vscodium <span class="quarto-category-count">(1)</span></div></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/O957/O957-TIL/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/O957/O957-TIL/blob/main/CODE_OF_CONDUCT.md" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="CODE_OF_CONDUCT.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"></h1></header><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"></h1></header><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 
 
 
 
 
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome!</h1>
-<p>This site is the <em>Today I Learned</em> (TIL) collection of <a href="https://github.com/O957">O957</a>.</p>
-<p>Each entry:</p>
-<ul>
-<li>Records the date it was <em>learned</em>, the date it was <em>added</em>, and the last date on which it was substantially <em>edited</em>.</li>
-<li>Walks through the initial problem or material that prompted it, with runnable code where applicable.</li>
-<li>Links to the documentation or external resources consulted along the way.</li>
-</ul>
-<section id="how-this-site-is-organized" class="level2">
-<h2 class="anchored" data-anchor-id="how-this-site-is-organized">How This Site Is Organized</h2>
-<p>Entries are grouped by programming language (e.g.&nbsp;Python) or discipline (e.g.&nbsp;Epidemiology). New sections appear as entries accumulate, day by day.</p>
+<section id="contributor-covenant-code-of-conduct" class="level1">
+<h1>Contributor Covenant Code of Conduct</h1>
+<section id="our-pledge" class="level2">
+<h2 class="anchored" data-anchor-id="our-pledge">Our Pledge</h2>
+<p>We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.</p>
+<p>We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.</p>
 </section>
-<section id="source" class="level2">
-<h2 class="anchored" data-anchor-id="source">Source</h2>
-<p>This book lives on GitHub at <a href="https://github.com/O957/O957-TIL" class="uri">https://github.com/O957/O957-TIL</a> and is licensed under the <a href="https://github.com/O957/O957-TIL/blob/main/LICENSE">Apache License 2.0</a> license.</p>
-<p>Corrections and suggestions are welcome via <a href="https://github.com/O957/O957-TIL/issues">issues</a>, but please first consult the <a href="https://github.com/O957/O957-TIL/CONTRIBUTING.md">contributing</a> file and <a href="./CODE_OF_CONDUCT.html">code of conduct</a>.</p>
-
+<section id="our-standards" class="level2">
+<h2 class="anchored" data-anchor-id="our-standards">Our Standards</h2>
+<p>Examples of behavior that contributes to a positive environment for our community include:</p>
+<ul>
+<li>Demonstrating empathy and kindness toward other people</li>
+<li>Being respectful of differing opinions, viewpoints, and experiences</li>
+<li>Giving and gracefully accepting constructive feedback</li>
+<li>Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience</li>
+<li>Focusing on what is best not just for us as individuals, but for the overall community</li>
+</ul>
+<p>Examples of unacceptable behavior include:</p>
+<ul>
+<li>The use of sexualized language or imagery, and sexual attention or advances of any kind</li>
+<li>Trolling, insulting or derogatory comments, and personal or political attacks</li>
+<li>Public or private harassment</li>
+<li>Publishing others’ private information, such as a physical or email address, without their explicit permission</li>
+<li>Other conduct which could reasonably be considered inappropriate in a professional setting</li>
+</ul>
+</section>
+<section id="enforcement-responsibilities" class="level2">
+<h2 class="anchored" data-anchor-id="enforcement-responsibilities">Enforcement Responsibilities</h2>
+<p>Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.</p>
+<p>Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.</p>
+</section>
+<section id="scope" class="level2">
+<h2 class="anchored" data-anchor-id="scope">Scope</h2>
+<p>This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.</p>
+</section>
+<section id="enforcement" class="level2">
+<h2 class="anchored" data-anchor-id="enforcement">Enforcement</h2>
+<p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at [repository-owner-username]+[at]+[proton]+[dot]+[me]. All complaints will be reviewed and investigated promptly and fairly.</p>
+<p>All community leaders are obligated to respect the privacy and security of the reporter of any incident.</p>
+</section>
+<section id="enforcement-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="enforcement-guidelines">Enforcement Guidelines</h2>
+<p>Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:</p>
+<section id="correction" class="level3">
+<h3 class="anchored" data-anchor-id="correction">1. Correction</h3>
+<p><strong>Community Impact</strong>: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.</p>
+<p><strong>Consequence</strong>: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.</p>
+</section>
+<section id="warning" class="level3">
+<h3 class="anchored" data-anchor-id="warning">2. Warning</h3>
+<p><strong>Community Impact</strong>: A violation through a single incident or series of actions.</p>
+<p><strong>Consequence</strong>: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.</p>
+</section>
+<section id="temporary-ban" class="level3">
+<h3 class="anchored" data-anchor-id="temporary-ban">3. Temporary Ban</h3>
+<p><strong>Community Impact</strong>: A serious violation of community standards, including sustained inappropriate behavior.</p>
+<p><strong>Consequence</strong>: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.</p>
+</section>
+<section id="permanent-ban" class="level3">
+<h3 class="anchored" data-anchor-id="permanent-ban">4. Permanent Ban</h3>
+<p><strong>Community Impact</strong>: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.</p>
+<p><strong>Consequence</strong>: A permanent ban from any sort of public interaction within the community.</p>
+</section>
+</section>
+<section id="attribution" class="level2">
+<h2 class="anchored" data-anchor-id="attribution">Attribution</h2>
+<p>This Code of Conduct is adapted from the <a href="https://www.contributor-covenant.org">Contributor Covenant</a>, version 2.1, available at <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct.html" class="uri">https://www.contributor-covenant.org/version/2/1/code_of_conduct.html</a>.</p>
+<p>Community Impact Guidelines were inspired by <a href="https://github.com/mozilla/diversity">Mozilla’s code of conduct enforcement ladder</a>.</p>
+<p>For answers to common questions about this code of conduct, see the FAQ at <a href="https://www.contributor-covenant.org/faq" class="uri">https://www.contributor-covenant.org/faq</a>. Translations are available at <a href="https://www.contributor-covenant.org/translations" class="uri">https://www.contributor-covenant.org/translations</a>.</p>
 
 
 <!-- -->
@@ -419,144 +421,7 @@ window.Quarto = {
 </section>
 </section>
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-<th>
-Reading Time
-</th>
-
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="dnNjb2RlJTJDdnNjb2RpdW0lMkNJREUlMkNwcml2YWN5" data-listing-date-sort="1764547200000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="334" data-listing-title-sort="Switch To VSCodium From VSCode" data-listing-filename-sort="ide_vs_codium.qmd">
-<td>
-<a href="./posts/ide_vs_codium.html" class="title listing-title">Switch To VSCodium From VSCode</a>
-</td>
-<td>
-<span class="listing-reading-time">2 min</span>
-</td>
-<td>
-<span class="listing-date">Dec 1, 2025</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="dnNjb2RlJTJDSURF" data-listing-date-sort="1764460800000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="13" data-listing-word-count-sort="2409" data-listing-title-sort="Opening VS Code From The Terminal Via Code" data-listing-filename-sort="ide_open_vscode_from_cmd_line.qmd">
-<td>
-<a href="./posts/ide_open_vscode_from_cmd_line.html" class="title listing-title">Opening VS Code From The Terminal Via Code</a>
-</td>
-<td>
-<span class="listing-reading-time">13 min</span>
-</td>
-<td>
-<span class="listing-date">Nov 30, 2025</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="UiUyQ3RpZHly" data-listing-date-sort="1764460800000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1794960000000" data-listing-reading-time-sort="5" data-listing-word-count-sort="869" data-listing-title-sort="Handling Unbound Tidyr Variables Using Rlang Data Masking" data-listing-filename-sort="r_handle_unbound_tidyr_variables.qmd">
-<td>
-<a href="./posts/r_handle_unbound_tidyr_variables.html" class="title listing-title">Handling Unbound Tidyr Variables Using Rlang Data Masking</a>
-</td>
-<td>
-<span class="listing-reading-time">5 min</span>
-</td>
-<td>
-<span class="listing-date">Nov 30, 2025</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-categories="cHl0aG9uJTJDcGRmJTJDcGF0aGxpYg==" data-listing-date-sort="1763596800000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="166" data-listing-title-sort="Find Empty PDFs Using Pathlib" data-listing-filename-sort="python_find_empty_pdfs_using_pathlib.qmd">
-<td>
-<a href="./posts/python_find_empty_pdfs_using_pathlib.html" class="title listing-title">Find Empty PDFs Using Pathlib</a>
-</td>
-<td>
-<span class="listing-reading-time">1 min</span>
-</td>
-<td>
-<span class="listing-date">Nov 20, 2025</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-categories="cHl0aG9uJTJDY3N2JTJDcG9sYXJz" data-listing-date-sort="1763596800000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="139" data-listing-title-sort="Check CSV Equivalence Using Polars" data-listing-filename-sort="python_check_csv_equivalence_using_polars.qmd">
-<td>
-<a href="./posts/python_check_csv_equivalence_using_polars.html" class="title listing-title">Check CSV Equivalence Using Polars</a>
-</td>
-<td>
-<span class="listing-reading-time">1 min</span>
-</td>
-<td>
-<span class="listing-date">Nov 20, 2025</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-categories="cHl0aG9uJTJDdGV4dHdyYXA=" data-listing-date-sort="1762992000000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="176" data-listing-title-sort="Uniformly Partitioning A String Using Textwrap" data-listing-filename-sort="python_uniformly_partitioning_a_string_textwrap.qmd">
-<td>
-<a href="./posts/python_uniformly_partitioning_a_string_textwrap.html" class="title listing-title">Uniformly Partitioning A String Using Textwrap</a>
-</td>
-<td>
-<span class="listing-reading-time">1 min</span>
-</td>
-<td>
-<span class="listing-date">Nov 13, 2025</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-categories="cHl0aG9uJTJDZGF0ZXRpbWU=" data-listing-date-sort="1762819200000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="4" data-listing-word-count-sort="698" data-listing-title-sort="Get The Remaining Dates In A Year Using Datetime" data-listing-filename-sort="python_get_remaining_dates_in_year_using_datetime.qmd">
-<td>
-<a href="./posts/python_get_remaining_dates_in_year_using_datetime.html" class="title listing-title">Get The Remaining Dates In A Year Using Datetime</a>
-</td>
-<td>
-<span class="listing-reading-time">4 min</span>
-</td>
-<td>
-<span class="listing-date">Nov 11, 2025</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1026,40 +891,86 @@ Reading Time
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> ""</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: "posts"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [title, reading-time, date]</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date desc"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  type: "table"</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: true</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  sort-ui: true</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  filter-ui: true</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  feed: true</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> "full"</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> false</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Welcome! {.unnumbered}</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>This site is the _Today I Learned_ (TIL) collection of <span class="co">[</span><span class="ot">O957</span><span class="co">](https://github.com/O957)</span>.</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Contributor Covenant Code of Conduct</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Our Pledge</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Our Standards</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Examples of behavior that contributes to a positive environment for our community include:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Demonstrating empathy and kindness toward other people</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Being respectful of differing opinions, viewpoints, and experiences</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Giving and gracefully accepting constructive feedback</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Focusing on what is best not just for us as individuals, but for the overall community</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Each entry:</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Examples of unacceptable behavior include:</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Records the date it was _learned_, the date it was _added_, and the last date on which it was substantially _edited_.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Walks through the initial problem or material that prompted it, with runnable code where applicable.</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Links to the documentation or external resources consulted along the way.</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## How This Site Is Organized</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>The use of sexualized language or imagery, and sexual attention or advances of any kind</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Trolling, insulting or derogatory comments, and personal or political attacks</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Public or private harassment</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Publishing others' private information, such as a physical or email address, without their explicit permission</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Other conduct which could reasonably be considered inappropriate in a professional setting</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Entries are grouped by programming language (e.g. Python) or discipline (e.g. Epidemiology). New sections appear as entries accumulate, day by day.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Enforcement Responsibilities</span></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Source</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>This book lives on GitHub at <span class="ot">&lt;https://github.com/O957/O957-TIL&gt;</span> and is licensed under the <span class="co">[</span><span class="ot">Apache License 2.0</span><span class="co">](https://github.com/O957/O957-TIL/blob/main/LICENSE)</span> license.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>Corrections and suggestions are welcome via <span class="co">[</span><span class="ot">issues</span><span class="co">](https://github.com/O957/O957-TIL/issues)</span>, but please first consult the <span class="co">[</span><span class="ot">contributing</span><span class="co">](https://github.com/O957/O957-TIL/CONTRIBUTING.md)</span> file and <span class="co">[</span><span class="ot">code of conduct</span><span class="co">](CODE_OF_CONDUCT.md)</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scope</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Enforcement</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at <span class="co">[</span><span class="ot">repository-owner-username</span><span class="co">]</span>+<span class="co">[</span><span class="ot">at</span><span class="co">]</span>+<span class="co">[</span><span class="ot">proton</span><span class="co">]</span>+<span class="co">[</span><span class="ot">dot</span><span class="co">]</span>+<span class="co">[</span><span class="ot">me</span><span class="co">]</span>. All complaints will be reviewed and investigated promptly and fairly.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>All community leaders are obligated to respect the privacy and security of the reporter of any incident.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Enforcement Guidelines</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1\. Correction</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>**Community Impact**: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>**Consequence**: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2\. Warning</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>**Community Impact**: A violation through a single incident or series of actions.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>**Consequence**: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3\. Temporary Ban</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>**Community Impact**: A serious violation of community standards, including sustained inappropriate behavior.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>**Consequence**: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4\. Permanent Ban</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>**Community Impact**: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>**Consequence**: A permanent ban from any sort of public interaction within the community.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## Attribution</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>This Code of Conduct is adapted from the <span class="co">[</span><span class="ot">Contributor Covenant</span><span class="co">](https://www.contributor-covenant.org)</span>, version 2.1, available at <span class="ot">&lt;https://www.contributor-covenant.org/version/2/1/code_of_conduct.html&gt;</span>.</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>Community Impact Guidelines were inspired by <span class="co">[</span><span class="ot">Mozilla's code of conduct enforcement ladder</span><span class="co">](https://github.com/mozilla/diversity)</span>.</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>For answers to common questions about this code of conduct, see the FAQ at <span class="ot">&lt;https://www.contributor-covenant.org/faq&gt;</span>. Translations are available at <span class="ot">&lt;https://www.contributor-covenant.org/translations&gt;</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -1069,7 +980,7 @@ Reading Time
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/O957/O957-TIL/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/O957/O957-TIL/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/O957/O957-TIL/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/O957/O957-TIL/blob/main/CODE_OF_CONDUCT.md" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
