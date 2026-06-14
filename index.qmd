@@ -1,1 +1,21 @@
-# Welcome!
+# Welcome! {.unnumbered}
+
+This site is the _Today I Learned_ (TIL) collection of [O957](https://github.com/O957).
+
+Each entry:
+
+* Records the date it was _learned_, the date it was _added_, and the last date on which it was substantially edited.
+* Walks through the initial problem or material that prompted it, with runnable code where applicable.
+* Links to the documentation or external resources consulted along the way.
+
+## How This Book Is Organized
+
+Entries are grouped by programming language (e.g. Python) or discipline (e.g. Epidemiology).
+
+New sections appear as entries accumulate. A list of resources referenced across all entries lives in the [References](references.qmd) chapter.
+
+## Source
+
+The source for this book lives at <https://github.com/O957/O957-TIL> and is licensed under the [Apache License 2.0](https://github.com/O957/O957-TIL/blob/main/LICENSE).
+
+Corrections and suggestions are welcome via [issues](https://github.com/O957/O957-TIL/issues), but please first consult the [contributing](https://github.com/O957/O957-TIL/CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md) files.

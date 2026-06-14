@@ -1,6 +1,8 @@
-# Handling Unbound Tidyr Variables Using Rlang Data Masking
+---
+title: Handling Unbound Tidyr Variables Using Rlang Data Masking
+---
 
-_Today I Learned added on 2025-11-18, learned on 2025-11-19._
+_Today I Learned added on 2025-11-18, learned on 2025-11-19; edited on 2026-06-14._
 
 During some routine R-package development, I noticed a `NOTE` in a GitHub Actions (`Run r-lib/actions/check-r-package@v2`) failure, produced by the workflow `R-CMD-check.yaml`:
 
@@ -111,7 +113,7 @@ The `tidyverse` documentation for `dplyr` has a section on this `NOTE` (see <htt
 >}
 > ```
 >
-> You’ll get an `NOTE` because `R CMD check` doesn’t know that dplyr functions use tidy evaluation:
+> You’ll get an `NOTE` because `R CMD check` doesn’t know that `dplyr` functions use tidy evaluation:
 >
 > ```
 > N  checking R code for possible problems
@@ -138,7 +140,9 @@ The `tidyverse` documentation for `dplyr` has a section on this `NOTE` (see <htt
 > }
 > ```
 
-If I wanted to simply get rid of the `NOTE`, I could add `@importFrom rlang .data` to my problematic file and then import `rlang` in my `DESCRIPTION` file. Before exploring this further through a small example, I wanted to see what `rlang` had to say. Both <https://rlang.r-lib.org/> and <https://rlang.r-lib.org/reference/topic-data-mask.html> provide copious and somewhat interesting reference information. These statements (which you can read about further) in the latter article, seemed more relevant:
+If I wanted to simply get rid of the `NOTE`, I could add `@importFrom rlang .data` to my problematic file and then import `rlang` in my `DESCRIPTION` file. Before exploring this further through a small example, I wanted to see what `rlang` had to say.
+
+Both <https://rlang.r-lib.org/> and <https://rlang.r-lib.org/reference/topic-data-mask.html> provide copious and somewhat interesting reference information. These statements (which you can read about further) in the latter article, seemed more relevant:
 
 > To keep these objects and functions in scope, the data frame is inserted at the bottom of the current chain of environments. It comes first and has precedence over the user environment. In other words, it masks the user environment.
 

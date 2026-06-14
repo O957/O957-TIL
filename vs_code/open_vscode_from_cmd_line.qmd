@@ -1,17 +1,19 @@
-# Opening VS Code From The Terminal Via Code
+---
+title: Opening VS Code From The Terminal Via Code
+---
 
-_Today I Learned added on 2025-11-30, learned on 2025-11-30._
+_Today I Learned added on 2025-11-30, learned on 2025-11-30; edited on 2026-06-14._
 
-For my paid and unpaid programming work I've used [VS Code](https://code.visualstudio.com). The routine for probably 4-5 years has been: I open the target folder by pressing the `Open` button on VS Code's platform or, if I remember to, to `Cmd+O` on my MacOS to open a folder.
+For my paid and unpaid programming work I've used [VS Code](https://code.visualstudio.com). The following has been routine for me for roughly 4 years: I open the target folder by pressing the `Open` button on VS Code's platform or, if I remember to, to `Cmd+O` on my MacOS to open a folder.
 
 Today, I remarked internally to myself that VS Code probably has a method to open a new window from within the Terminal. Lo and behold, it does: `code .` to open the current directory in VS Code.
 
-Of note, to get `code` working, I performed the following actions:
+Of note, to get the `code` command working, I performed the following actions:
 
-1. Opened VS Code.
+1. Open VS Code.
 2. Open Command Palette via `Cmd+Shift+P`.
-3. Typed: "shell command"
-4. Selected: "Shell Command: Install 'code' command in PATH"
+3. Type: "shell command"
+4. Select: "Shell Command: Install 'code' command in PATH"
 5. Gave permissions to VS Code.
 
 Running `code --help` shows some other interesting options:

@@ -1,8 +1,10 @@
-# Get The Remaining Dates In A Year Using Datetime
+---
+title: Get The Remaining Dates In A Year Using Datetime
+---
 
-_Today I Learned added on 2025-11-13, learned on 2025-11-11._
+_Today I Learned added on 2025-11-13, learned on 2025-11-11; edited on 2026-06-14._
 
-Suppose you want to see how many dates remaining in the current year or, better yet, want a `list` of all of the remaining dates in the current year.
+Suppose you want to see how many dates there are remaining in the current year or, better yet, want a `list` of all of the remaining dates in the current year.
 
 The Python package `datetime`, which is Python's built-in date and time manipulation package (<https://docs.python.org/3/library/datetime.html>), allows one to do this rather easily.
 
@@ -10,16 +12,16 @@ The Python package `datetime`, which is Python's built-in date and time manipula
 import datetime
 
 
-# datetime.date(2025, 11, 13)
+# out: datetime.date(2025, 11, 13)
 today = datetime.date.today()
 
-# datetime.date(2025, 12, 31)
+# out: datetime.date(2025, 12, 31)
 end_of_year = today.replace(month=12, day=31)
 
-# 49
+# out: 49
 remaining_days_in_year = (end_of_year - today).days + 1
 
-# ['2025-11-13', '2025-11-14', ..., '2025-12-31']
+# out: ['2025-11-13', '2025-11-14', ..., '2025-12-31']
 remaining_dates_in_year = [today + datetime.timedelta(days=d).strftime("%Y-%m-%d") for d in range(remaining_days_in_year)]
 ```
 
@@ -31,7 +33,9 @@ I became interested in this originally when I wanted to create text files for my
 
 ```python
 """
-Script for getting the remaining dates (formatted as ISO-8601 strings) in the current year and creating daily note files from a template.
+Script for getting the remaining dates (formatted as
+ISO-8601 strings) in the current year and creating
+daily note files from a template.
 """
 
 from datetime import date, timedelta
@@ -41,7 +45,8 @@ import sys
 
 def get_remaining_dates(year: int) -> list[str]:
     """
-    Get all remaining dates in the specified year as ISO-8601 strings.
+    Get all remaining dates in the specified year as
+    ISO-8601 strings.
 
     Parameters
     ----------
@@ -86,7 +91,8 @@ def read_template(filename: str) -> str:
 
 def create_note_files(dates: list[str], template: str, prefix: str = "Notes_For_") -> int:
     """
-    Create note files for each date if they don't already exist.
+    Create note files for each date if they don't
+    already exist.
 
     Parameters
     ----------
