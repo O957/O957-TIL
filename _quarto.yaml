@@ -22,8 +22,6 @@ website:
       - icon: "github"
         href: "https://github.com/O957"
 
-bibliography: references.bib
-
 format:
   html:
     theme:
