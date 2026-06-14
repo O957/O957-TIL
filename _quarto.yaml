@@ -1,35 +1,26 @@
 project:
-  type: book
+  type: website
   resources:
     - assets/fonts/
 
-book:
+website:
   title: "Today I Learned"
-  subtitle: "A collection of references and demonstrations for concepts and methods that I have come across and want to mentally retain."
-  author: "O957"
+  reader-mode: true
+  description: "A collection of references and demonstrations for concepts and methods that I have come across and want to mentally retain."
   repo-url: "https://github.com/O957/O957-TIL"
   repo-actions: [issue, source]
   site-url: "https://o957.github.io/O957-TIL/"
-  search: true
-  downloads: [pdf]
+  search:
+    location: "navbar"
+    type: "overlay"
   page-footer:
     left: "© 2025—2026 O957 · [Apache License 2.0](https://github.com/O957/O957-TIL/blob/main/LICENSE)"
     right: "Made with [Quarto](https://quarto.org/)."
-  chapters:
-    - index.qmd
-    - part: "Python"
-      chapters:
-        - python/check_csv_equivalence_using_polars.qmd
-        - python/find_empty_pdfs_using_pathlib.qmd
-        - python/get_remaining_dates_in_year_using_datetime.qmd
-        - python/uniformly_partitioning_a_string_textwrap.qmd
-    - part: "R"
-      chapters:
-        - r/handle_unbound_tidyr_variables.qmd
-    - part: "VS Code / VSCodium"
-      chapters:
-        - vs_code/open_vscode_from_cmd_line.qmd
-    - references.qmd
+  navbar:
+    background: "gray"
+    right:
+      - icon: "github"
+        href: "https://github.com/O957"
 
 bibliography: references.bib
 
