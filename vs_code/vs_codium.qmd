@@ -1,0 +1,23 @@
+---
+title: Switch To VSCodium From VSCode
+---
+
+_Today I Learned added on 2026-06-14, learned sometime around 2025-12-01._
+
+In reviewing which tools are comparatively better with respect to privacy on <https://github.com/pluja/awesome-privacy>, I noticed that VSCodium (<https://vscodium.com/>) was listed.
+
+Curious, I went to their website and saw the following:
+
+> Microsoft's `vscode` source code is open source (MIT-licensed), but the product available for download (Visual Studio Code) is licensed under [this not-FLOSS license](https://code.visualstudio.com/license) and contains telemetry/tracking. According to [this comment](https://github.com/Microsoft/vscode/issues/60#issuecomment-161792005) from a Visual Studio Code maintainer:
+>
+> > When we [Microsoft] build Visual Studio Code, we do exactly this. We clone the vscode repository, we lay down a customized product.json that has Microsoft specific functionality (telemetry, gallery, logo, etc.), and then produce a build that we release under our license.
+> >
+> > When you clone and build from the vscode repo, none of these endpoints are configured in the default product.json. Therefore, you generate a "clean" build, without the Microsoft customizations, which is by default licensed under the MIT license
+>
+> The VSCodium project exists so that you don't have to download+build from source. This project includes special build scripts that clone Microsoft's vscode repo, run the build commands, and upload the resulting binaries for you to [GitHub releases](https://github.com/VSCodium/vscodium/releases). **These binaries are licensed under the MIT license. Telemetry is disabled**
+
+Sold, I switched that day to VSCodium and I have not regretted my choice!
+
+As for the name "Codium" and the logo (which looks like some sort of sea coral), I found Codium (<https://en.wikipedia.org/wiki/Codium>) on Wikipedia:
+
+> ***Codium*** is a [genus](https://en.wikipedia.org/wiki/Genus "Genus") of [edible](https://en.wikipedia.org/wiki/Edible_seaweed "Edible seaweed") [green macroalgae](https://en.wikipedia.org/wiki/Green_algae "Green algae") (or [seaweed](https://en.wikipedia.org/wiki/Seaweed "Seaweed")) under the order [Bryopsidales](https://en.wikipedia.org/wiki/Bryopsidales "Bryopsidales"). The genus name is derived from a Greek word that pertains to the soft texture of its [thallus](https://en.wikipedia.org/wiki/Thallus "Thallus"). One of the foremost experts on *Codium* taxonomy was [Paul Claude Silva](https://en.wikipedia.org/wiki/Paul_Silva "Paul Silva") at the [University of California, Berkeley](https://en.wikipedia.org/wiki/University_of_California,_Berkeley "University of California, Berkeley"). [1](https://en.wikipedia.org/wiki/Codium#cite_note-:0-1) [2](https://en.wikipedia.org/wiki/Codium#cite_note-Hoek,_Mann_and_Jahns_95-2) Silva was able to describe 36 species for the genus, and in honor of his work on *Codium*, [1](https://en.wikipedia.org/wiki/Codium#cite_note-:0-1) the species *C. silvae* was named after him. [3](https://en.wikipedia.org/wiki/Codium#cite_note-:1-3)
