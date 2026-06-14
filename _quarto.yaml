@@ -19,16 +19,16 @@ book:
     - index.qmd
     - part: "Python"
       chapters:
-        - python/check_csv_equivalence_using_polars.md
-        - python/find_empty_pdfs_using_pathlib.md
-        - python/get_remaining_dates_in_year_using_datetime.md
-        - python/uniformly_partitioning_a_string_textwrap.md
+        - python/check_csv_equivalence_using_polars.qmd
+        - python/find_empty_pdfs_using_pathlib.qmd
+        - python/get_remaining_dates_in_year_using_datetime.qmd
+        - python/uniformly_partitioning_a_string_textwrap.qmd
     - part: "R"
       chapters:
-        - r/handle_unbound_tidyr_variables.md
+        - r/handle_unbound_tidyr_variables.qmd
     - part: "VS Code / VSCodium"
       chapters:
-        - vs_code/open_vscode_from_cmd_line.md
+        - vs_code/open_vscode_from_cmd_line.qmd
     - references.qmd
 
 bibliography: references.bib
