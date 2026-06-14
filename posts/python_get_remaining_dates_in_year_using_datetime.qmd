@@ -1,5 +1,8 @@
 ---
 title: Get The Remaining Dates In A Year Using Datetime
+categories: ["python", "datetime"]
+date: "2025-11-11"
+date-modified: "2026-06-14"
 ---
 
 _Today I Learned added on 2025-11-13, learned on 2025-11-11; edited on 2026-06-14._

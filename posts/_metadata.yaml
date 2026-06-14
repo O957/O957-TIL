@@ -1,0 +1,11 @@
+bibliography: "references.bib"
+
+freeze: auto
+
+format:
+  html: default
+  pdf: default
+
+format-links: [pdf]
+
+page-layout: "article"

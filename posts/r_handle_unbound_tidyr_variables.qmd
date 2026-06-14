@@ -1,8 +1,11 @@
 ---
 title: Handling Unbound Tidyr Variables Using Rlang Data Masking
+categories: ["R", "tidyr"]
+date: "2025-11-30"
+date-modified: "2026-11-18"
 ---
 
-_Today I Learned added on 2025-11-18, learned on 2025-11-19; edited on 2026-06-14._
+_Today I Learned added on 2025-11-19, learned on 2025-11-18; edited on 2026-06-14._
 
 During some routine R-package development, I noticed a `NOTE` in a GitHub Actions (`Run r-lib/actions/check-r-package@v2`) failure, produced by the workflow `R-CMD-check.yaml`:
 

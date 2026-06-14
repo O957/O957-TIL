@@ -1,5 +1,8 @@
 ---
 title: Switch To VSCodium From VSCode
+categories: ["vscode", "vscodium", "IDE", "privacy"]
+date: "2025-12-01"
+date-modified: "2026-06-14"
 ---
 
 _Today I Learned added on 2026-06-14, learned sometime around 2025-12-01._

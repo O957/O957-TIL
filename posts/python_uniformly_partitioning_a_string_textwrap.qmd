@@ -1,5 +1,8 @@
 ---
 title: Uniformly Partitioning A String Using Textwrap
+categories: ["python", "textwrap"]
+date: "2025-11-13"
+date-modified: "2026-06-14"
 ---
 
 _Today I Learned added on 2025-11-13, learned on 2025-11-08; edited on 2026-06-14._

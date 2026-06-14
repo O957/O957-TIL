@@ -1,5 +1,8 @@
 ---
 title: Find Empty PDFs Using Pathlib
+categories: ["python", "pdf", "pathlib"]
+date: "2025-11-20"
+date-modified: "2026-06-14"
 ---
 
 _Today I Learned added on 2025-11-20, learned on 2025-11-19; edited on 2026-06-14._

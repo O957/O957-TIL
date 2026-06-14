@@ -1,5 +1,8 @@
 ---
 title: Opening VS Code From The Terminal Via Code
+categories: ["vscode", "IDE"]
+date: "2025-11-30"
+date-modified: "2026-06-14"
 ---
 
 _Today I Learned added on 2025-11-30, learned on 2025-11-30; edited on 2026-06-14._

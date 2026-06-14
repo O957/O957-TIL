@@ -1,5 +1,8 @@
 ---
 title: Check CSV Equivalence Using Polars
+categories: ["python", "csv", "polars"]
+date: "2025-11-20"
+date-modified: "2026-06-14"
 ---
 
 _Today I Learned added on 2025-11-20, learned on 2025-11-20; edited on 2026-06-14._
