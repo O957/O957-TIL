@@ -1,8 +1,8 @@
 version = 1
 revision = 2
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 
 [[package]]
-name = "baseline-template-change"
+name = "o957-til"
 version = "0.0.1"
 source = { virtual = "." }
