@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -76,14 +79,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-949ceaa56ea364b0f0e87398b301f850.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6af6b1ed15c77f19e211377a8beffc89.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-949ceaa56ea364b0f0e87398b301f850.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bd3e91a58312c3d76bc91696a06d39dd.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc123ffaafae812c2f3e3976326d7c16.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bd3e91a58312c3d76bc91696a06d39dd.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2ed055156c01d80252202c7876d18ce8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b3ea4a6e691d638ef5dc327872891dc3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-2ed055156c01d80252202c7876d18ce8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4a84b056075791333bb33be988fc6c03.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-bf8fb013408e50be1524e3791f2f27aa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-4a84b056075791333bb33be988fc6c03.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -142,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -462,7 +465,7 @@ Reading Time
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="dnNjb2RlJTJDdnNjb2RpdW0lMkNJREUlMkNwcml2YWN5" data-listing-date-sort="1764547200000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="334" data-listing-title-sort="Switch To VSCodium From VSCode" data-listing-filename-sort="ide_vs_codium.qmd">
+<tr data-index="0" data-categories="dnNjb2RlJTJDdnNjb2RpdW0lMkNJREUlMkNwcml2YWN5" data-listing-date-sort="1764547200000" data-listing-file-modified-sort="1785124152967" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="334" data-listing-title-sort="Switch To VSCodium From VSCode" data-listing-filename-sort="ide_vs_codium.qmd">
 <td>
 <a href="./posts/ide_vs_codium.html" class="title listing-title">Switch To VSCodium From VSCode</a>
 </td>
@@ -475,20 +478,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="1" data-categories="dnNjb2RlJTJDSURF" data-listing-date-sort="1764460800000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="13" data-listing-word-count-sort="2409" data-listing-title-sort="Opening VS Code From The Terminal Via Code" data-listing-filename-sort="ide_open_vscode_from_cmd_line.qmd">
-<td>
-<a href="./posts/ide_open_vscode_from_cmd_line.html" class="title listing-title">Opening VS Code From The Terminal Via Code</a>
-</td>
-<td>
-<span class="listing-reading-time">13 min</span>
-</td>
-<td>
-<span class="listing-date">Nov 30, 2025</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="UiUyQ3RpZHly" data-listing-date-sort="1764460800000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1794960000000" data-listing-reading-time-sort="5" data-listing-word-count-sort="869" data-listing-title-sort="Handling Unbound Tidyr Variables Using Rlang Data Masking" data-listing-filename-sort="r_handle_unbound_tidyr_variables.qmd">
+<tr data-index="1" data-categories="UiUyQ3RpZHly" data-listing-date-sort="1764460800000" data-listing-file-modified-sort="1785124152967" data-listing-date-modified-sort="1794960000000" data-listing-reading-time-sort="5" data-listing-word-count-sort="873" data-listing-title-sort="Handling Unbound Tidyr Variables Using Rlang Data Masking" data-listing-filename-sort="r_handle_unbound_tidyr_variables.qmd">
 <td>
 <a href="./posts/r_handle_unbound_tidyr_variables.html" class="title listing-title">Handling Unbound Tidyr Variables Using Rlang Data Masking</a>
 </td>
@@ -501,7 +491,20 @@ Reading Time
 
 </tr>
 
-<tr data-index="3" data-categories="cHl0aG9uJTJDcGRmJTJDcGF0aGxpYg==" data-listing-date-sort="1763596800000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="166" data-listing-title-sort="Find Empty PDFs Using Pathlib" data-listing-filename-sort="python_find_empty_pdfs_using_pathlib.qmd">
+<tr data-index="2" data-categories="dnNjb2RlJTJDSURF" data-listing-date-sort="1764460800000" data-listing-file-modified-sort="1785124152967" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="13" data-listing-word-count-sort="2409" data-listing-title-sort="Opening VS Code From The Terminal Via Code" data-listing-filename-sort="ide_open_vscode_from_cmd_line.qmd">
+<td>
+<a href="./posts/ide_open_vscode_from_cmd_line.html" class="title listing-title">Opening VS Code From The Terminal Via Code</a>
+</td>
+<td>
+<span class="listing-reading-time">13 min</span>
+</td>
+<td>
+<span class="listing-date">Nov 30, 2025</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="cHl0aG9uJTJDcGRmJTJDcGF0aGxpYg==" data-listing-date-sort="1763596800000" data-listing-file-modified-sort="1785124152967" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="166" data-listing-title-sort="Find Empty PDFs Using Pathlib" data-listing-filename-sort="python_find_empty_pdfs_using_pathlib.qmd">
 <td>
 <a href="./posts/python_find_empty_pdfs_using_pathlib.html" class="title listing-title">Find Empty PDFs Using Pathlib</a>
 </td>
@@ -514,7 +517,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="4" data-categories="cHl0aG9uJTJDY3N2JTJDcG9sYXJz" data-listing-date-sort="1763596800000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="139" data-listing-title-sort="Check CSV Equivalence Using Polars" data-listing-filename-sort="python_check_csv_equivalence_using_polars.qmd">
+<tr data-index="4" data-categories="cHl0aG9uJTJDY3N2JTJDcG9sYXJz" data-listing-date-sort="1763596800000" data-listing-file-modified-sort="1785124152967" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="140" data-listing-title-sort="Check CSV Equivalence Using Polars" data-listing-filename-sort="python_check_csv_equivalence_using_polars.qmd">
 <td>
 <a href="./posts/python_check_csv_equivalence_using_polars.html" class="title listing-title">Check CSV Equivalence Using Polars</a>
 </td>
@@ -527,7 +530,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="5" data-categories="cHl0aG9uJTJDdGV4dHdyYXA=" data-listing-date-sort="1762992000000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="176" data-listing-title-sort="Uniformly Partitioning A String Using Textwrap" data-listing-filename-sort="python_uniformly_partitioning_a_string_textwrap.qmd">
+<tr data-index="5" data-categories="cHl0aG9uJTJDdGV4dHdyYXA=" data-listing-date-sort="1762992000000" data-listing-file-modified-sort="1785124152967" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="178" data-listing-title-sort="Uniformly Partitioning A String Using Textwrap" data-listing-filename-sort="python_uniformly_partitioning_a_string_textwrap.qmd">
 <td>
 <a href="./posts/python_uniformly_partitioning_a_string_textwrap.html" class="title listing-title">Uniformly Partitioning A String Using Textwrap</a>
 </td>
@@ -540,7 +543,7 @@ Reading Time
 
 </tr>
 
-<tr data-index="6" data-categories="cHl0aG9uJTJDZGF0ZXRpbWU=" data-listing-date-sort="1762819200000" data-listing-file-modified-sort="1781468505544" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="4" data-listing-word-count-sort="698" data-listing-title-sort="Get The Remaining Dates In A Year Using Datetime" data-listing-filename-sort="python_get_remaining_dates_in_year_using_datetime.qmd">
+<tr data-index="6" data-categories="cHl0aG9uJTJDZGF0ZXRpbWU=" data-listing-date-sort="1762819200000" data-listing-file-modified-sort="1785124152967" data-listing-date-modified-sort="1781395200000" data-listing-reading-time-sort="4" data-listing-word-count-sort="702" data-listing-title-sort="Get The Remaining Dates In A Year Using Datetime" data-listing-filename-sort="python_get_remaining_dates_in_year_using_datetime.qmd">
 <td>
 <a href="./posts/python_get_remaining_dates_in_year_using_datetime.html" class="title listing-title">Get The Remaining Dates In A Year Using Datetime</a>
 </td>
@@ -662,16 +665,16 @@ Reading Time
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
