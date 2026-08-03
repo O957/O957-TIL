@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/toml_taplo.html",
       "/posts/ide_vs_codium.html",
       "/posts/r_handle_unbound_tidyr_variables.html",
       "/posts/ide_open_vscode_from_cmd_line.html",
